@@ -1,0 +1,775 @@
+[32m2026-10-03 10:46:20.181[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36m__init__[0m:[36m8331[0m - [34m[1mDEX None None None[0m
+[32m2026-10-03 10:46:20.181[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36m__init__[0m:[36m511[0m - [34m[1mHeaderItem[0m
+[32m2026-10-03 10:46:20.190[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'HEADER_ITEM'[0m
+[32m2026-10-03 10:46:20.191[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36m__init__[0m:[36m511[0m - [34m[1mHeaderItem[0m
+[32m2026-10-03 10:46:20.198[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'HEADER_ITEM'. Required time 0:00.0074[0m
+[32m2026-10-03 10:46:20.198[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'MAP_LIST'[0m
+[32m2026-10-03 10:46:20.198[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'MAP_LIST'. Required time 0:00.0000[0m
+[32m2026-10-03 10:46:20.198[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'STRING_DATA_ITEM'[0m
+[32m2026-10-03 10:46:20.253[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'STRING_DATA_ITEM'. Required time 0:00.0549[0m
+[32m2026-10-03 10:46:20.264[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'STRING_ID_ITEM'[0m
+[32m2026-10-03 10:46:20.286[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'STRING_ID_ITEM'. Required time 0:00.0226[0m
+[32m2026-10-03 10:46:20.298[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'TYPE_ID_ITEM'[0m
+[32m2026-10-03 10:46:20.331[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'TYPE_ID_ITEM'. Required time 0:00.0333[0m
+[32m2026-10-03 10:46:20.331[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'FIELD_ID_ITEM'[0m
+[32m2026-10-03 10:46:20.390[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'FIELD_ID_ITEM'. Required time 0:00.0589[0m
+[32m2026-10-03 10:46:20.390[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'TYPE_LIST'[0m
+[32m2026-10-03 10:46:20.406[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'TYPE_LIST'. Required time 0:00.0159[0m
+[32m2026-10-03 10:46:20.409[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'PROTO_ID_ITEM'[0m
+[32m2026-10-03 10:46:20.423[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'PROTO_ID_ITEM'. Required time 0:00.0141[0m
+[32m2026-10-03 10:46:20.423[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'METHOD_ID_ITEM'[0m
+[32m2026-10-03 10:46:20.562[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'METHOD_ID_ITEM'. Required time 0:00.1386[0m
+[32m2026-10-03 10:46:20.562[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'CLASS_DATA_ITEM'[0m
+[32m2026-10-03 10:46:20.768[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'CLASS_DATA_ITEM'. Required time 0:00.2065[0m
+[32m2026-10-03 10:46:20.772[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'DEBUG_INFO_ITEM'[0m
+[32m2026-10-03 10:46:20.773[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'DEBUG_INFO_ITEM'. Required time 0:00.0009[0m
+[32m2026-10-03 10:46:20.773[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'CODE_ITEM'[0m
+[32m2026-10-03 10:46:20.912[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'CODE_ITEM'. Required time 0:00.1396[0m
+[32m2026-10-03 10:46:20.912[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'ANNOTATION_ITEM'[0m
+[32m2026-10-03 10:46:21.188[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'ANNOTATION_ITEM'. Required time 0:00.2761[0m
+[32m2026-10-03 10:46:21.192[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'ANNOTATION_SET_ITEM'[0m
+[32m2026-10-03 10:46:21.210[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'ANNOTATION_SET_ITEM'. Required time 0:00.0175[0m
+[32m2026-10-03 10:46:21.215[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'ANNOTATION_SET_REF_LIST'[0m
+[32m2026-10-03 10:46:21.216[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'ANNOTATION_SET_REF_LIST'. Required time 0:00.0010[0m
+[32m2026-10-03 10:46:21.217[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'ENCODED_ARRAY_ITEM'[0m
+[32m2026-10-03 10:46:21.218[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'ENCODED_ARRAY_ITEM'. Required time 0:00.0017[0m
+[32m2026-10-03 10:46:21.218[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'ANNOTATIONS_DIRECTORY_ITEM'[0m
+[32m2026-10-03 10:46:21.335[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'ANNOTATIONS_DIRECTORY_ITEM'. Required time 0:00.1166[0m
+[32m2026-10-03 10:46:21.337[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7636[0m - [34m[1mStarting parsing map_item 'CLASS_DEF_ITEM'[0m
+[32m2026-10-03 10:46:22.525[0m | [34m[1mDEBUG   [0m | [36mandroguard.core.dex[0m:[36mparse[0m:[36m7757[0m - [34m[1mEnd of parsing map_item 'CLASS_DEF_ITEM'. Required time 0:01.1880[0m
+
+========== Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1; ==========
+  field: $index : I
+  field: I$0 : I
+  field: L$0 : Ljava/lang/Object;
+  field: L$1 : Ljava/lang/Object;
+  field: label : I
+  field: this$0 : Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;
+  --- method <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; I Lkotlin/coroutines/Continuation;)V ---
+    iput-object 1 0 9111(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->this$0 Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)
+    iput 2 0 9106(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->$index I)
+    const/4 1 2
+    invoke-direct 0 1 3 65073(Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(I Lkotlin/coroutines/Continuation;)V)
+    return-void 
+  --- method create (Ljava/lang/Object; Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation; ---
+    new-instance 3 3287(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;)
+    iget-object 0 2 9111(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->this$0 Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)
+    iget 1 2 9106(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->$index I)
+    invoke-direct 3 0 1 4 17015(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;-><init>(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; I Lkotlin/coroutines/Continuation;)V)
+    return-object 3
+  --- method invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object; ---
+    check-cast 1 13253(Lkotlinx/coroutines/CoroutineScope;)
+    check-cast 2 13163(Lkotlin/coroutines/Continuation;)
+    invoke-virtual 0 1 2 17018(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->invoke(Lkotlinx/coroutines/CoroutineScope; Lkotlin/coroutines/Continuation;)Ljava/lang/Object;)
+    move-result-object 1
+    return-object 1
+  --- method invoke (Lkotlinx/coroutines/CoroutineScope; Lkotlin/coroutines/Continuation;)Ljava/lang/Object; ---
+    invoke-virtual 0 1 2 17016(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->create(Ljava/lang/Object; Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;)
+    move-result-object 1
+    check-cast 1 3287(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;)
+    sget-object 2 34032(Lkotlin/Unit;->INSTANCE Lkotlin/Unit;)
+    invoke-virtual 1 2 17019(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;)
+    move-result-object 1
+    return-object 1
+  --- method invokeSuspend (Ljava/lang/Object;)Ljava/lang/Object; ---
+    invoke-static 65064(Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;)
+    move-result-object 0
+    iget 1 14 9110(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->label I)
+    const/4 2 2
+    const/4 3 0
+    const/4 4 1
+    const/4 5 0
+    if-eqz 1 47
+    if-eq 1 4 30
+    if-ne 1 2 20
+    iget 0 14 9107(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->I$0 I)
+    iget-object 1 14 9109(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->L$1 Ljava/lang/Object;)
+    check-cast 1 3303(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)
+    iget-object 2 14 9108(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->L$0 Ljava/lang/Object;)
+    check-cast 2 13278(Lkotlinx/coroutines/sync/Mutex;)
+    invoke-static 15 64957(Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V)
+    goto/16 120
+    move-exception 15
+    goto/16 407
+    new-instance 15 12984(Ljava/lang/IllegalStateException;)
+    const-string 0 38283(call to 'resume' before 'invoke' with coroutine)
+    invoke-direct 15 0 64436(Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V)
+    throw 15
+    iget 1 14 9107(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->I$0 I)
+    iget-object 6 14 9109(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->L$1 Ljava/lang/Object;)
+    check-cast 6 3303(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)
+    iget-object 7 14 9108(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->L$0 Ljava/lang/Object;)
+    check-cast 7 13278(Lkotlinx/coroutines/sync/Mutex;)
+    invoke-static 15 64957(Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V)
+    move-object 15 7
+    goto 32
+    invoke-static 15 64957(Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V)
+    iget-object 15 14 9111(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->this$0 Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)
+    invoke-virtual 15 17089(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getMutex()Lkotlinx/coroutines/sync/Mutex;)
+    move-result-object 15
+    iget-object 1 14 9111(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->this$0 Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)
+    iget 6 14 9106(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->$index I)
+    iput-object 15 14 9108(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->L$0 Ljava/lang/Object;)
+    iput-object 1 14 9109(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->L$1 Ljava/lang/Object;)
+    iput 6 14 9107(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->I$0 I)
+    iput 4 14 9110(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->label I)
+    invoke-interface 15 5 14 65260(Lkotlinx/coroutines/sync/Mutex;->lock(Ljava/lang/Object; Lkotlin/coroutines/Continuation;)Ljava/lang/Object;)
+    move-result-object 7
+    if-ne 7 0 3
+    return-object 0
+    move 13 6
+    move-object 6 1
+    move 1 13
+    invoke-static 4685(Lcom/tencent/qqmusiccommon/util/ApnManager;->isNetworkAvailable()Z)
+    move-result 7
+    if-nez 7 27
+    sget-object 0 3390(Lcom/tencent/qqmusiclite/api/GlobalContext;->INSTANCE Lcom/tencent/qqmusiclite/api/GlobalContext;)
+    invoke-virtual 0 5333(Lcom/tencent/qqmusiclite/api/GlobalContext;->getContext()Landroid/content/Context;)
+    move-result-object 1
+    invoke-virtual 0 5333(Lcom/tencent/qqmusiclite/api/GlobalContext;->getContext()Landroid/content/Context;)
+    move-result-object 0
+    sget 2 2827(Lcom/tencent/qqmusiclite/R$string;->network_tips_not_available I)
+    invoke-virtual 0 2 169(Landroid/content/Context;->getString(I)Ljava/lang/String;)
+    move-result-object 0
+    invoke-static 1 4 0 54893(Lcom/tencent/qqmusiclite/ui/toast/BannerTips;->show(Landroid/content/Context; I Ljava/lang/String;)V)
+    move-object 2 15
+    goto/16 313
+    move-exception 0
+    goto/16 324
+    sget-object 7 3487(Lcom/tencent/qqmusiclite/dagger/Components;->INSTANCE Lcom/tencent/qqmusiclite/dagger/Components;)
+    invoke-virtual 7 5821(Lcom/tencent/qqmusiclite/dagger/Components;->getDagger()Lcom/tencent/qqmusiclite/dagger/DataComponent;)
+    move-result-object 7
+    invoke-interface 7 5900(Lcom/tencent/qqmusiclite/dagger/DataComponent;->accountManager()Lcom/tencent/qqmusiclite/manager/AccountManager;)
+    move-result-object 7
+    iput-object 15 14 9108(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->L$0 Ljava/lang/Object;)
+    iput-object 6 14 9109(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->L$1 Ljava/lang/Object;)
+    iput 1 14 9107(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->I$0 I)
+    iput 2 14 9110(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;->label I)
+    invoke-static 7 3 14 4 5 37073(Lcom/tencent/qqmusiclite/manager/AccountManager;->isLogin$default(Lcom/tencent/qqmusiclite/manager/AccountManager; Z Lkotlin/coroutines/Continuation; I Ljava/lang/Object;)Ljava/lang/Object;)
+    move-result-object 2
+    if-ne 2 0 3
+    return-object 0
+    move 0 1
+    move-object 1 6
+    move-object 13 2
+    move-object 2 15
+    move-object 15 13
+    check-cast 15 12969(Ljava/lang/Boolean;)
+    invoke-virtual 15 64386(Ljava/lang/Boolean;->booleanValue()Z)
+    move-result 15
+    if-nez 15 23
+    sget-object 15 3390(Lcom/tencent/qqmusiclite/api/GlobalContext;->INSTANCE Lcom/tencent/qqmusiclite/api/GlobalContext;)
+    invoke-virtual 15 5333(Lcom/tencent/qqmusiclite/api/GlobalContext;->getContext()Landroid/content/Context;)
+    move-result-object 0
+    invoke-virtual 15 5333(Lcom/tencent/qqmusiclite/api/GlobalContext;->getContext()Landroid/content/Context;)
+    move-result-object 15
+    sget 1 2926(Lcom/tencent/qqmusiclite/R$string;->qq_music_not_bind_account I)
+    invoke-virtual 15 1 169(Landroid/content/Context;->getString(I)Ljava/lang/String;)
+    move-result-object 15
+    invoke-static 0 4 15 54893(Lcom/tencent/qqmusiclite/ui/toast/BannerTips;->show(Landroid/content/Context; I Ljava/lang/String;)V)
+    goto/16 251
+    invoke-virtual 1 0 17103(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->setSelectedPosition(I)V)
+    sget-object 15 3487(Lcom/tencent/qqmusiclite/dagger/Components;->INSTANCE Lcom/tencent/qqmusiclite/dagger/Components;)
+    invoke-virtual 15 5807(Lcom/tencent/qqmusiclite/dagger/Components;->getAddSongs()Lcom/tencent/qqmusiclite/usecase/playlist/AddSongs;)
+    move-result-object 15
+    invoke-static 1 17078(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->access$getAddSongsCallback$p(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1;)
+    move-result-object 0
+    invoke-virtual 15 0 57413(Lcom/tencent/qqmusiclite/usecase/playlist/AddSongs;->setCallback(Lcom/tencent/qqmusiclite/usecase/playlist/AddSongs$Callback;)V)
+    invoke-virtual 1 17094(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getSongList()Ljava/util/List;)
+    move-result-object 0
+    if-eqz 0 235
+    invoke-interface 0 64708(Ljava/util/Collection;->isEmpty()Z)
+    move-result 0
+    if-eqz 0 4
+    goto/16 227
+    invoke-virtual 1 17092(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getSelectedFolderInfo()Lcom/tencent/qqmusic/core/folder/FolderInfo;)
+    move-result-object 0
+    if-eqz 0 215
+    invoke-virtual 0 2895(Lcom/tencent/qqmusic/core/folder/FolderInfo;->getId()J)
+    move-result-wide 6
+    const-wide/16 8 201
+    cmp-long 6 6 8
+    if-nez 6 5
+    const/16 6 10000
+    goto 3
+    const/16 6 1000
+    invoke-virtual 0 2890(Lcom/tencent/qqmusic/core/folder/FolderInfo;->getCount()I)
+    move-result 7
+    if-lt 7 6 55
+    invoke-virtual 0 2895(Lcom/tencent/qqmusic/core/folder/FolderInfo;->getId()J)
+    move-result-wide 0
+    cmp-long 15 0 8
+    if-nez 15 22
+    sget-object 15 3390(Lcom/tencent/qqmusiclite/api/GlobalContext;->INSTANCE Lcom/tencent/qqmusiclite/api/GlobalContext;)
+    invoke-virtual 15 5333(Lcom/tencent/qqmusiclite/api/GlobalContext;->getContext()Landroid/content/Context;)
+    move-result-object 0
+    invoke-virtual 15 5333(Lcom/tencent/qqmusiclite/api/GlobalContext;->getContext()Landroid/content/Context;)
+    move-result-object 15
+    sget 1 2913(Lcom/tencent/qqmusiclite/R$string;->qq_music_create_playlist_song_over_size I)
+    invoke-virtual 15 1 169(Landroid/content/Context;->getString(I)Ljava/lang/String;)
+    move-result-object 15
+    invoke-static 0 4 15 54893(Lcom/tencent/qqmusiclite/ui/toast/BannerTips;->show(Landroid/content/Context; I Ljava/lang/String;)V)
+    goto 20
+    sget-object 15 3390(Lcom/tencent/qqmusiclite/api/GlobalContext;->INSTANCE Lcom/tencent/qqmusiclite/api/GlobalContext;)
+    invoke-virtual 15 5333(Lcom/tencent/qqmusiclite/api/GlobalContext;->getContext()Landroid/content/Context;)
+    move-result-object 0
+    invoke-virtual 15 5333(Lcom/tencent/qqmusiclite/api/GlobalContext;->getContext()Landroid/content/Context;)
+    move-result-object 15
+    sget 1 2931(Lcom/tencent/qqmusiclite/R$string;->qq_music_playlist_song_over_size I)
+    invoke-virtual 15 1 169(Landroid/content/Context;->getString(I)Ljava/lang/String;)
+    move-result-object 15
+    invoke-static 0 4 15 54893(Lcom/tencent/qqmusiclite/ui/toast/BannerTips;->show(Landroid/content/Context; I Ljava/lang/String;)V)
+    sget-object 15 34032(Lkotlin/Unit;->INSTANCE Lkotlin/Unit;)
+    invoke-interface 2 5 65261(Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V)
+    return-object 15
+    invoke-virtual 0 2890(Lcom/tencent/qqmusic/core/folder/FolderInfo;->getCount()I)
+    move-result 7
+    sub-int/2addr 6 7
+    new-instance 7 11665(Lcom/tencent/qqmusiclite/usecase/playlist/AddSongs$Param;)
+    invoke-virtual 0 2895(Lcom/tencent/qqmusic/core/folder/FolderInfo;->getId()J)
+    move-result-wide 10
+    invoke-virtual 1 17094(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getSongList()Ljava/util/List;)
+    move-result-object 12
+    invoke-interface 12 64782(Ljava/util/List;->size()I)
+    move-result 12
+    if-le 12 6 11
+    invoke-virtual 1 17094(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getSongList()Ljava/util/List;)
+    move-result-object 12
+    invoke-interface 12 3 6 64783(Ljava/util/List;->subList(I I)Ljava/util/List;)
+    move-result-object 6
+    goto 5
+    invoke-virtual 1 17094(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getSongList()Ljava/util/List;)
+    move-result-object 6
+    invoke-direct 7 10 11 6 57386(Lcom/tencent/qqmusiclite/usecase/playlist/AddSongs$Param;-><init>(J Ljava/util/List;)V)
+    invoke-virtual 15 7 57411(Lcom/tencent/qqmusiclite/usecase/playlist/AddSongs;->invoke(Lcom/tencent/qqmusiclite/usecase/playlist/AddSongs$Param;)V)
+    invoke-virtual 0 2895(Lcom/tencent/qqmusic/core/folder/FolderInfo;->getId()J)
+    move-result-wide 6
+    cmp-long 15 6 8
+    if-nez 15 93
+    invoke-virtual 1 17094(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getSongList()Ljava/util/List;)
+    move-result-object 15
+    invoke-interface 15 64708(Ljava/util/Collection;->isEmpty()Z)
+    move-result 15
+    if-nez 15 83
+    invoke-virtual 1 17094(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getSongList()Ljava/util/List;)
+    move-result-object 15
+    invoke-interface 15 3 64773(Ljava/util/List;->get(I)Ljava/lang/Object;)
+    move-result-object 15
+    check-cast 15 1167(Lcom/tencent/qqmusic/core/song/SongInfo;)
+    const-string 0 29511(SongListAddViewModel)
+    new-instance 1 13007(Ljava/lang/StringBuilder;)
+    invoke-direct 1 64552(Ljava/lang/StringBuilder;-><init>()V)
+    const-string 3 37010(addSong: )
+    invoke-virtual 1 3 64562(Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;)
+    invoke-virtual 15 3015(Lcom/tencent/qqmusic/core/song/SongInfo;->getName()Ljava/lang/String;)
+    move-result-object 3
+    invoke-virtual 1 3 64562(Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;)
+    invoke-virtual 1 64571(Ljava/lang/StringBuilder;->toString()Ljava/lang/String;)
+    move-result-object 1
+    invoke-static 0 1 3610(Lcom/tencent/qqmusic/innovation/common/logging/MLog;->i(Ljava/lang/String; Ljava/lang/String;)V)
+    sget-object 0 19074(Lcom/tencent/qqmusiclite/manager/FavorManager;->INSTANCE Lcom/tencent/qqmusiclite/manager/FavorManager;)
+    new-instance 1 7457(Lcom/tencent/qqmusiclite/manager/FavorManager$LastFavorStateChangeInfo;)
+    invoke-virtual 15 3002(Lcom/tencent/qqmusic/core/song/SongInfo;->getId()J)
+    move-result-wide 6
+    invoke-static 4 65066(Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;)
+    move-result-object 3
+    invoke-direct 1 6 7 3 37363(Lcom/tencent/qqmusiclite/manager/FavorManager$LastFavorStateChangeInfo;-><init>(J Ljava/lang/Boolean;)V)
+    invoke-virtual 0 1 37636(Lcom/tencent/qqmusiclite/manager/FavorManager;->setLastFavorStateChangeInfo(Lcom/tencent/qqmusiclite/manager/FavorManager$LastFavorStateChangeInfo;)V)
+    invoke-virtual 0 15 37596(Lcom/tencent/qqmusiclite/manager/FavorManager;->isFavorWithCompatibility(Lcom/tencent/qqmusic/core/song/SongInfo;)Z)
+    move-result 1
+    if-nez 1 23
+    invoke-virtual 15 3099(Lcom/tencent/qqmusic/core/song/SongInfo;->isLongAudioRadio()Z)
+    move-result 1
+    if-eqz 1 10
+    invoke-virtual 0 37573(Lcom/tencent/qqmusiclite/manager/FavorManager;->getMFavorLongAudioPrograms()Ljava/util/ArrayList;)
+    move-result-object 0
+    invoke-virtual 0 15 64674(Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z)
+    goto 8
+    invoke-virtual 0 37576(Lcom/tencent/qqmusiclite/manager/FavorManager;->getMFavorSongs()Ljava/util/ArrayList;)
+    move-result-object 0
+    invoke-virtual 0 15 64674(Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z)
+    sget-object 15 34032(Lkotlin/Unit;->INSTANCE Lkotlin/Unit;)
+    invoke-interface 2 5 65261(Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V)
+    return-object 15
+    sget-object 15 34032(Lkotlin/Unit;->INSTANCE Lkotlin/Unit;)
+    invoke-interface 2 5 65261(Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V)
+    return-object 15
+    move-object 0 15
+    move-object 15 2
+    invoke-interface 15 5 65261(Lkotlinx/coroutines/sync/Mutex;->unlock(Ljava/lang/Object;)V)
+    throw 0
+
+========== Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; ==========
+  field: $stable : I
+  field: Companion : Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$Companion;
+  field: addSongsCallback : Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1;
+  field: back$delegate : Landroidx/compose/runtime/MutableState;
+  field: createPlaylistCallback : Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$createPlaylistCallback$1;
+  field: createSongListViewVisibility$delegate : Landroidx/compose/runtime/MutableState;
+  field: isEmpty$delegate : Landroidx/compose/runtime/MutableState;
+  field: mutex : Lkotlinx/coroutines/sync/Mutex;
+  field: myCreateSongListCallback : Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$myCreateSongListCallback$1;
+  field: mySongLists$delegate : Landroidx/compose/runtime/MutableState;
+  field: selectedFolderInfo : Lcom/tencent/qqmusic/core/folder/FolderInfo;
+  field: selectedPosition$delegate : Landroidx/compose/runtime/MutableState;
+  field: songList : Ljava/util/List;
+  --- method <clinit> ()V ---
+    new-instance 0 3286(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$Companion;)
+    const/4 1 0
+    invoke-direct 0 1 17014(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V)
+    sput-object 0 9129(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->Companion Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$Companion;)
+    const/16 0 8
+    sput 0 9128(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->$stable I)
+    return-void 
+  --- method <init> ()V ---
+    invoke-direct 4 1994(Landroidx/lifecycle/ViewModel;-><init>()V)
+    const/4 0 0
+    const/4 1 1
+    const/4 2 0
+    invoke-static 0 1 2 65262(Lkotlinx/coroutines/sync/MutexKt;->Mutex$default(Z I Ljava/lang/Object;)Lkotlinx/coroutines/sync/Mutex;)
+    move-result-object 0
+    iput-object 0 4 9135(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->mutex Lkotlinx/coroutines/sync/Mutex;)
+    invoke-static 64998(Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;)
+    move-result-object 0
+    iput-object 0 4 9140(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->songList Ljava/util/List;)
+    invoke-static 64998(Lkotlin/collections/CollectionsKt;->emptyList()Ljava/util/List;)
+    move-result-object 0
+    const/4 1 2
+    invoke-static 0 2 1 2 1477(Landroidx/compose/runtime/SnapshotStateKt;->mutableStateOf$default(Ljava/lang/Object; Landroidx/compose/runtime/SnapshotMutationPolicy; I Ljava/lang/Object;)Landroidx/compose/runtime/MutableState;)
+    move-result-object 0
+    iput-object 0 4 9137(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->mySongLists$delegate Landroidx/compose/runtime/MutableState;)
+    sget-object 0 34014(Ljava/lang/Boolean;->FALSE Ljava/lang/Boolean;)
+    invoke-static 0 2 1 2 1477(Landroidx/compose/runtime/SnapshotStateKt;->mutableStateOf$default(Ljava/lang/Object; Landroidx/compose/runtime/SnapshotMutationPolicy; I Ljava/lang/Object;)Landroidx/compose/runtime/MutableState;)
+    move-result-object 3
+    iput-object 3 4 9133(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->createSongListViewVisibility$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-static 0 2 1 2 1477(Landroidx/compose/runtime/SnapshotStateKt;->mutableStateOf$default(Ljava/lang/Object; Landroidx/compose/runtime/SnapshotMutationPolicy; I Ljava/lang/Object;)Landroidx/compose/runtime/MutableState;)
+    move-result-object 3
+    iput-object 3 4 9131(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->back$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-static 0 2 1 2 1477(Landroidx/compose/runtime/SnapshotStateKt;->mutableStateOf$default(Ljava/lang/Object; Landroidx/compose/runtime/SnapshotMutationPolicy; I Ljava/lang/Object;)Landroidx/compose/runtime/MutableState;)
+    move-result-object 0
+    iput-object 0 4 9134(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->isEmpty$delegate Landroidx/compose/runtime/MutableState;)
+    const/4 0 -1
+    invoke-static 0 64444(Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;)
+    move-result-object 0
+    invoke-static 0 2 1 2 1477(Landroidx/compose/runtime/SnapshotStateKt;->mutableStateOf$default(Ljava/lang/Object; Landroidx/compose/runtime/SnapshotMutationPolicy; I Ljava/lang/Object;)Landroidx/compose/runtime/MutableState;)
+    move-result-object 0
+    iput-object 0 4 9139(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->selectedPosition$delegate Landroidx/compose/runtime/MutableState;)
+    new-instance 0 3298(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1;)
+    invoke-direct 0 4 17060(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1;-><init>(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)V)
+    iput-object 0 4 9130(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->addSongsCallback Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1;)
+    new-instance 0 3299(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$createPlaylistCallback$1;)
+    invoke-direct 0 4 17064(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$createPlaylistCallback$1;-><init>(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)V)
+    iput-object 0 4 9132(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->createPlaylistCallback Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$createPlaylistCallback$1;)
+    new-instance 0 3302(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$myCreateSongListCallback$1;)
+    invoke-direct 0 4 17073(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$myCreateSongListCallback$1;-><init>(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)V)
+    iput-object 0 4 9136(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->myCreateSongListCallback Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$myCreateSongListCallback$1;)
+    return-void 
+  --- method access$getAddSongsCallback$p (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1; ---
+    iget-object 0 0 9130(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->addSongsCallback Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1;)
+    return-object 0
+  --- method access$getCreatePlaylistCallback$p (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$createPlaylistCallback$1; ---
+    iget-object 0 0 9132(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->createPlaylistCallback Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$createPlaylistCallback$1;)
+    return-object 0
+  --- method access$setBack (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; Z)V ---
+    invoke-direct 0 1 17098(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->setBack(Z)V)
+    return-void 
+  --- method access$setCreateSongListViewVisibility (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; Z)V ---
+    invoke-direct 0 1 17099(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->setCreateSongListViewVisibility(Z)V)
+    return-void 
+  --- method access$setEmpty (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; Z)V ---
+    invoke-direct 0 1 17100(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->setEmpty(Z)V)
+    return-void 
+  --- method access$setMySongLists (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; Ljava/util/List;)V ---
+    invoke-direct 0 1 17101(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->setMySongLists(Ljava/util/List;)V)
+    return-void 
+  --- method setBack (Z)V ---
+    iget-object 0 1 9131(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->back$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-static 2 64389(Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;)
+    move-result-object 2
+    invoke-interface 0 2 1462(Landroidx/compose/runtime/MutableState;->setValue(Ljava/lang/Object;)V)
+    return-void 
+  --- method setCreateSongListViewVisibility (Z)V ---
+    iget-object 0 1 9133(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->createSongListViewVisibility$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-static 2 64389(Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;)
+    move-result-object 2
+    invoke-interface 0 2 1462(Landroidx/compose/runtime/MutableState;->setValue(Ljava/lang/Object;)V)
+    return-void 
+  --- method setEmpty (Z)V ---
+    iget-object 0 1 9134(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->isEmpty$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-static 2 64389(Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;)
+    move-result-object 2
+    invoke-interface 0 2 1462(Landroidx/compose/runtime/MutableState;->setValue(Ljava/lang/Object;)V)
+    return-void 
+  --- method setMySongLists (Ljava/util/List;)V ---
+    iget-object 0 1 9137(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->mySongLists$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-interface 0 2 1462(Landroidx/compose/runtime/MutableState;->setValue(Ljava/lang/Object;)V)
+    return-void 
+  --- method addSong (I)V ---
+    invoke-static 6 1996(Landroidx/lifecycle/ViewModelKt;->getViewModelScope(Landroidx/lifecycle/ViewModel;)Lkotlinx/coroutines/CoroutineScope;)
+    move-result-object 0
+    new-instance 3 3287(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;)
+    const/4 1 0
+    invoke-direct 3 6 7 1 17015(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSong$1;-><init>(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; I Lkotlin/coroutines/Continuation;)V)
+    const/4 4 3
+    const/4 5 0
+    const/4 2 0
+    invoke-static/range 0 1 2 3 4 5 65206(Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope; Lkotlin/coroutines/CoroutineContext; Lkotlinx/coroutines/CoroutineStart; Lkotlin/jvm/functions/Function2; I Ljava/lang/Object;)Lkotlinx/coroutines/Job;)
+    return-void 
+  --- method closeCreateSongListView ()V ---
+    const/4 0 0
+    invoke-direct 2 0 17099(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->setCreateSongListViewVisibility(Z)V)
+    const-string 0 29511(SongListAddViewModel)
+    const-string 1 32431([closeCreateSongListView])
+    invoke-static 0 1 3604(Lcom/tencent/qqmusic/innovation/common/logging/MLog;->d(Ljava/lang/String; Ljava/lang/String;)V)
+    return-void 
+  --- method createSongListAndAddSongs (Lcom/tencent/qqmusic/core/folder/FolderInfo;)V ---
+    const-string 0 44592(folderInfo)
+    invoke-static 8 0 65102(Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object; Ljava/lang/String;)V)
+    invoke-static 7 1996(Landroidx/lifecycle/ViewModelKt;->getViewModelScope(Landroidx/lifecycle/ViewModel;)Lkotlinx/coroutines/CoroutineScope;)
+    move-result-object 1
+    new-instance 4 3300(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$createSongListAndAddSongs$1;)
+    const/4 0 0
+    invoke-direct 4 8 7 0 17067(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$createSongListAndAddSongs$1;-><init>(Lcom/tencent/qqmusic/core/folder/FolderInfo; Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; Lkotlin/coroutines/Continuation;)V)
+    const/4 5 3
+    const/4 6 0
+    const/4 2 0
+    const/4 3 0
+    invoke-static/range 1 2 3 4 5 6 65206(Lkotlinx/coroutines/BuildersKt;->launch$default(Lkotlinx/coroutines/CoroutineScope; Lkotlin/coroutines/CoroutineContext; Lkotlinx/coroutines/CoroutineStart; Lkotlin/jvm/functions/Function2; I Ljava/lang/Object;)Lkotlinx/coroutines/Job;)
+    return-void 
+  --- method getBack ()Z ---
+    iget-object 0 1 9131(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->back$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-interface 0 1482(Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;)
+    move-result-object 0
+    check-cast 0 12969(Ljava/lang/Boolean;)
+    invoke-virtual 0 64386(Ljava/lang/Boolean;->booleanValue()Z)
+    move-result 0
+    return 0
+  --- method getCreateSongListViewVisibility ()Z ---
+    iget-object 0 1 9133(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->createSongListViewVisibility$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-interface 0 1482(Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;)
+    move-result-object 0
+    check-cast 0 12969(Ljava/lang/Boolean;)
+    invoke-virtual 0 64386(Ljava/lang/Boolean;->booleanValue()Z)
+    move-result 0
+    return 0
+  --- method getMutex ()Lkotlinx/coroutines/sync/Mutex; ---
+    iget-object 0 1 9135(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->mutex Lkotlinx/coroutines/sync/Mutex;)
+    return-object 0
+  --- method getMySongLists ()Ljava/util/List; ---
+    iget-object 0 1 9137(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->mySongLists$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-interface 0 1482(Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;)
+    move-result-object 0
+    check-cast 0 13075(Ljava/util/List;)
+    return-object 0
+  --- method getMySongLists ()V ---
+    sget-object 0 3487(Lcom/tencent/qqmusiclite/dagger/Components;->INSTANCE Lcom/tencent/qqmusiclite/dagger/Components;)
+    invoke-virtual 0 5853(Lcom/tencent/qqmusiclite/dagger/Components;->getMyCreateSongList()Lcom/tencent/qqmusic/usecase/mymusic/GetMyselfCreateSongList;)
+    move-result-object 0
+    iget-object 1 2 9136(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->myCreateSongListCallback Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$myCreateSongListCallback$1;)
+    invoke-virtual 0 1 4078(Lcom/tencent/qqmusic/usecase/mymusic/GetMyselfCreateSongList;->setCallback(Lcom/tencent/qqmusic/usecase/mymusic/GetMyselfCreateSongList$Callback;)V)
+    new-instance 1 3301(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$getMySongLists$1;)
+    invoke-direct 1 17072(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$getMySongLists$1;-><init>()V)
+    invoke-virtual 0 1 4077(Lcom/tencent/qqmusic/usecase/mymusic/GetMyselfCreateSongList;->invoke(Lcom/tencent/qqmusic/clean/UseCaseParam;)V)
+    return-void 
+  --- method getSelectedFolderInfo ()Lcom/tencent/qqmusic/core/folder/FolderInfo; ---
+    invoke-virtual 2 17093(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getSelectedPosition()I)
+    move-result 0
+    const/4 1 -1
+    if-eq 0 1 17
+    invoke-virtual 2 17090(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getMySongLists()Ljava/util/List;)
+    move-result-object 0
+    invoke-virtual 2 17093(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getSelectedPosition()I)
+    move-result 1
+    invoke-static 0 1 65006(Lkotlin/collections/CollectionsKt;->getOrNull(Ljava/util/List; I)Ljava/lang/Object;)
+    move-result-object 0
+    check-cast 0 1161(Lcom/tencent/qqmusic/core/folder/FolderInfo;)
+    goto 3
+    iget-object 0 2 9138(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->selectedFolderInfo Lcom/tencent/qqmusic/core/folder/FolderInfo;)
+    return-object 0
+  --- method getSelectedPosition ()I ---
+    iget-object 0 1 9139(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->selectedPosition$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-interface 0 1482(Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;)
+    move-result-object 0
+    check-cast 0 12994(Ljava/lang/Number;)
+    invoke-virtual 0 64480(Ljava/lang/Number;->intValue()I)
+    move-result 0
+    return 0
+  --- method getSongList ()Ljava/util/List; ---
+    iget-object 0 1 9140(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->songList Ljava/util/List;)
+    return-object 0
+  --- method isEmpty ()Z ---
+    iget-object 0 1 9134(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->isEmpty$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-interface 0 1482(Landroidx/compose/runtime/State;->getValue()Ljava/lang/Object;)
+    move-result-object 0
+    check-cast 0 12969(Ljava/lang/Boolean;)
+    invoke-virtual 0 64386(Ljava/lang/Boolean;->booleanValue()Z)
+    move-result 0
+    return 0
+  --- method onCreateSongListClicked ()V ---
+    const/4 0 1
+    invoke-direct 2 0 17099(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->setCreateSongListViewVisibility(Z)V)
+    const-string 0 29511(SongListAddViewModel)
+    const-string 1 33388([onCreateSongListClicked])
+    invoke-static 0 1 3604(Lcom/tencent/qqmusic/innovation/common/logging/MLog;->d(Ljava/lang/String; Ljava/lang/String;)V)
+    return-void 
+  --- method onStart ()V ---
+    invoke-virtual 0 17091(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->getMySongLists()V)
+    return-void 
+  --- method setSelectedFolderInfo (Lcom/tencent/qqmusic/core/folder/FolderInfo;)V ---
+    iput-object 1 0 9138(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->selectedFolderInfo Lcom/tencent/qqmusic/core/folder/FolderInfo;)
+    return-void 
+  --- method setSelectedPosition (I)V ---
+    iget-object 0 1 9139(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->selectedPosition$delegate Landroidx/compose/runtime/MutableState;)
+    invoke-static 2 64444(Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;)
+    move-result-object 2
+    invoke-interface 0 2 1462(Landroidx/compose/runtime/MutableState;->setValue(Ljava/lang/Object;)V)
+    return-void 
+  --- method setSongList (Ljava/util/List;)V ---
+    const-string 0 8915(<set-?>)
+    invoke-static 2 0 65102(Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object; Ljava/lang/String;)V)
+    iput-object 2 1 9140(Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;->songList Ljava/util/List;)
+    return-void 
+
+
+========== related classes containing 'SongListAdd' in classes8 ==========
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragment$Companion;
+      <init> ()V
+      <init> (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragment$onCreateView$1;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddFragment;)V
+      handleOnBackPressed ()V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragment$onCreateView$2$2;
+      <init> (Lcom/tencent/qqmusiclite/manager/AccountManager; Lcom/tencent/qqmusiclite/fragment/SongListAddFragment; Lkotlin/coroutines/Continuation;)V
+      create (Ljava/lang/Object; Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Lkotlinx/coroutines/CoroutineScope; Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+      invokeSuspend (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragment$onCreateView$2$3$1$1$1;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddFragment;)V
+      invoke ()Ljava/lang/Object;
+      invoke ()V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragment$onCreateView$2$3$1$1;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddFragment;)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragment$onCreateView$2$3$1;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddFragment;)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragment$onCreateView$2$3;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddFragment;)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragment$special$$inlined$viewModels$default$1;
+      <init> (Landroidx/fragment/app/Fragment;)V
+      invoke ()Landroidx/fragment/app/Fragment;
+      invoke ()Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragment$special$$inlined$viewModels$default$2;
+      <init> (Lkotlin/jvm/functions/Function0;)V
+      invoke ()Landroidx/lifecycle/ViewModelStore;
+      invoke ()Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragment;
+      <clinit> ()V
+      <init> ()V
+      access$getVm (Lcom/tencent/qqmusiclite/fragment/SongListAddFragment;)Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;
+      getVm ()Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;
+      getSongList ()Ljava/util/List;
+      navigateBackAndClearData ()V
+      onCreateView (Landroid/view/LayoutInflater; Landroid/view/ViewGroup; Landroid/os/Bundle;)Landroid/view/View;
+      onResume ()V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragmentKt$page$1$1$1;
+      <init> (Lkotlin/jvm/functions/Function0;)V
+      invoke ()Ljava/lang/Object;
+      invoke ()V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragmentKt$page$1;
+      <init> (Lkotlin/jvm/functions/Function0;)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragmentKt$page$2$1;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)V
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (I)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragmentKt$page$2$2;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)V
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Lcom/tencent/qqmusic/core/folder/FolderInfo;)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragmentKt$page$2$3;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)V
+      invoke ()Ljava/lang/Object;
+      invoke ()V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragmentKt$page$2$4;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)V
+      invoke ()Ljava/lang/Object;
+      invoke ()V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragmentKt$page$2;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; Z Lkotlin/jvm/functions/Function0;)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/foundation/layout/PaddingValues; Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragmentKt$page$3;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; Lkotlin/jvm/functions/Function0; Z I I)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddFragmentKt;
+      access$page (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; Lkotlin/jvm/functions/Function0; Z Landroidx/compose/runtime/Composer; I I)V
+      page (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; Lkotlin/jvm/functions/Function0; Z Landroidx/compose/runtime/Composer; I I)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$Companion;
+      <init> ()V
+      <init> (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1$onError$1;
+      <clinit> ()V
+      <init> ()V
+      invoke (Lcom/tencent/qqmusic/core/song/SongInfo;)Ljava/lang/CharSequence;
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1$onError$2;
+      <clinit> ()V
+      <init> ()V
+      invoke (Lcom/tencent/qqmusic/core/song/SongInfo;)Ljava/lang/CharSequence;
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1$onError$3;
+      <clinit> ()V
+      <init> ()V
+      invoke (Lcom/tencent/qqmusic/core/song/SongInfo;)Ljava/lang/CharSequence;
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1$onError$4;
+      <clinit> ()V
+      <init> ()V
+      invoke (Lcom/tencent/qqmusic/core/song/SongInfo;)Ljava/lang/CharSequence;
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1$onError$5;
+      <clinit> ()V
+      <init> ()V
+      invoke (Lcom/tencent/qqmusic/core/song/SongInfo;)Ljava/lang/CharSequence;
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1$onSuccess$4;
+      <clinit> ()V
+      <init> ()V
+      invoke (Lcom/tencent/qqmusic/core/song/SongInfo;)Ljava/lang/CharSequence;
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1$onSuccess$5;
+      <clinit> ()V
+      <init> ()V
+      invoke (Lcom/tencent/qqmusic/core/song/SongInfo;)Ljava/lang/CharSequence;
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1$onSuccess$6;
+      <clinit> ()V
+      <init> ()V
+      invoke (Lcom/tencent/qqmusic/core/song/SongInfo;)Ljava/lang/CharSequence;
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1$onSuccess$7;
+      <clinit> ()V
+      <init> ()V
+      invoke (Lcom/tencent/qqmusic/core/song/SongInfo;)Ljava/lang/CharSequence;
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1$onSuccess$8;
+      <clinit> ()V
+      <init> ()V
+      invoke (Lcom/tencent/qqmusic/core/song/SongInfo;)Ljava/lang/CharSequence;
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$addSongsCallback$1;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)V
+      onAlreadyExists (J)V
+      onError (Ljava/lang/Throwable;)V
+      onSuccess (J)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$createPlaylistCallback$1;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)V
+      onError (Ljava/lang/Throwable;)V
+      onSuccess (J J)V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$createSongListAndAddSongs$1;
+      <init> (Lcom/tencent/qqmusic/core/folder/FolderInfo; Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel; Lkotlin/coroutines/Continuation;)V
+      create (Ljava/lang/Object; Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Lkotlinx/coroutines/CoroutineScope; Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+      invokeSuspend (Ljava/lang/Object;)Ljava/lang/Object;
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$getMySongLists$1;
+      <init> ()V
+  Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel$myCreateSongListCallback$1;
+      <init> (Lcom/tencent/qqmusiclite/fragment/SongListAddViewModel;)V
+      onError (Ljava/lang/Throwable;)V
+      onSuccess (Ljava/util/List;)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$SongListAddPage$1$1$1$1$1;
+      <init> (Lkotlin/jvm/functions/Function0;)V
+      invoke ()Ljava/lang/Object;
+      invoke ()V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$SongListAddPage$1$1$2$1$2$1;
+      <init> (Lkotlin/jvm/functions/Function0;)V
+      invoke ()Ljava/lang/Object;
+      invoke ()V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$SongListAddPage$1$1$2$1;
+      <init> (Lkotlin/jvm/functions/Function0;)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/foundation/lazy/LazyItemScope; Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$SongListAddPage$1$1$2$2$1$2$1;
+      <init> (Lkotlin/jvm/functions/Function1; I)V
+      invoke ()Ljava/lang/Object;
+      invoke ()V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$SongListAddPage$1$1$2$2$1;
+      <init> (Lkotlin/jvm/functions/Function1; I Lcom/tencent/qqmusic/core/folder/FolderInfo;)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/foundation/lazy/LazyItemScope; Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$SongListAddPage$1$1$2;
+      <init> (Ljava/util/List; Lkotlin/jvm/functions/Function0; Lkotlin/jvm/functions/Function1;)V
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/foundation/lazy/LazyListScope;)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$SongListAddPage$2$1;
+      <init> (Lkotlin/jvm/functions/Function1;)V
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Lcom/tencent/qqmusic/core/folder/FolderInfo;)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$SongListAddPage$3$1;
+      <init> (Lkotlin/jvm/functions/Function0;)V
+      invoke ()Ljava/lang/Object;
+      invoke ()V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$SongListAddPage$4;
+      <init> (Z Ljava/util/List; Lkotlin/jvm/functions/Function1; Z Lkotlin/jvm/functions/Function1; Lkotlin/jvm/functions/Function0; Lkotlin/jvm/functions/Function0; Z I I)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$folderCreateItem$$inlined$ConstraintLayout$1;
+      <init> (Landroidx/constraintlayout/compose/Measurer;)V
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$folderCreateItem$$inlined$ConstraintLayout$2;
+      <init> (Landroidx/constraintlayout/compose/ConstraintLayoutScope; I Lkotlin/jvm/functions/Function0;)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$folderCreateItem$1$1;
+      <clinit> ()V
+      <init> ()V
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/constraintlayout/compose/ConstrainScope;)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$folderCreateItem$1$2$1;
+      <init> (Landroidx/constraintlayout/compose/ConstrainedLayoutReference;)V
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/constraintlayout/compose/ConstrainScope;)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$folderCreateItem$2;
+      <init> (Landroidx/compose/ui/Modifier; I)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$topTitleAdd$$inlined$ConstraintLayout$1;
+      <init> (Landroidx/constraintlayout/compose/Measurer;)V
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/ui/semantics/SemanticsPropertyReceiver;)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$topTitleAdd$$inlined$ConstraintLayout$2;
+      <init> (Landroidx/constraintlayout/compose/ConstraintLayoutScope; I Lkotlin/jvm/functions/Function0; I Lkotlin/jvm/functions/Function0;)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$topTitleAdd$1$1;
+      <clinit> ()V
+      <init> ()V
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/constraintlayout/compose/ConstrainScope;)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$topTitleAdd$1$2$1;
+      <init> (Lkotlin/jvm/functions/Function0;)V
+      invoke ()Ljava/lang/Object;
+      invoke ()V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$topTitleAdd$1$3;
+      <clinit> ()V
+      <init> ()V
+      invoke (Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/constraintlayout/compose/ConstrainScope;)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt$topTitleAdd$2;
+      <init> (Lkotlin/jvm/functions/Function0; I)V
+      invoke (Ljava/lang/Object; Ljava/lang/Object;)Ljava/lang/Object;
+      invoke (Landroidx/compose/runtime/Composer; I)V
+  Lcom/tencent/qqmusiclite/ui/shelfcard/SongListAddPageKt;
+      SongListAddPage (Z Ljava/util/List; Lkotlin/jvm/functions/Function1; Z Lkotlin/jvm/functions/Function1; Lkotlin/jvm/functions/Function0; Lkotlin/jvm/functions/Function0; Z Landroidx/compose/runtime/Composer; I I)V
+      folderCreateItem (Landroidx/compose/ui/Modifier; Landroidx/compose/runtime/Composer; I)V
+      topTitleAdd (Lkotlin/jvm/functions/Function0; Landroidx/compose/runtime/Composer; I)V
