@@ -3,12 +3,12 @@
     package="local.xmplaylist.unlock">
 
     <application
-        android:label="小米歌单1000解锁"
+        android:label="MiMusicX"
         android:allowBackup="false">
 
         <meta-data android:name="xposedmodule" android:value="true" />
         <meta-data android:name="xposeddescription"
-            android:value="解除小米音乐(QQ音乐简洁版)歌单1000首添加限制" />
+            android:value="小米音乐(QQ音乐简洁版)增强：解除歌单1000首添加限制、不自动进入免费听页、启动直达「我的」" />
         <meta-data android:name="xposedminversion" android:value="93" />
     </application>
 </manifest>

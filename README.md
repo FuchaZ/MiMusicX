@@ -1,4 +1,4 @@
-# XMPlaylistUnlock — 小米音乐增强模块
+# MiMusicX — 小米音乐增强模块
 
 针对小米音乐（内嵌 QQ 音乐简洁版 `com.tencent.qqmusiclite`）的 LSPosed 模块，
 当前包含两个独立功能。目标版本 **4.47.0.1**（歌单限制功能自 4.46.2.1 起可用）。
@@ -83,7 +83,7 @@ MainActivity.configNavigationAndMinibar()
 
 ## 安装激活
 
-1. 安装 `XMPlaylistUnlock-1.1.0.apk`
+1. 安装 `MiMusicX-1.1.0.apk`
 2. LSPosed → 模块 → 启用"小米歌单1000解锁"→ 作用域勾选"音乐（小米音乐）"
    （已通过 assets/xposed_scope 默认声明 com.miui.player）
 3. 强制停止小米音乐后重新打开
@@ -93,15 +93,15 @@ MainActivity.configNavigationAndMinibar()
 LSPosed 日志里应出现（前 5 条是 Hook 安装，重启小米音乐后一起出现）：
 
 ```
-[XMPlaylistUnlock] hook installed via findAndHookMethod: com.tencent.qqmusic.core.folder.FolderInfo.getCount()
-[XMPlaylistUnlock] hook installed: com.tencent.qqmusiclite.fragment.home.QuickPlayManager.isGotoQuickPlayTab() -> always false
-[XMPlaylistUnlock] hook installed: com.tencent.qqmusiclite.activity.main.viewmodel.MainActivityViewModel.getTabs() -> strip TopTab id=4
-[XMPlaylistUnlock] hook installed: com.tencent.qqmusiclite.fragment.home.BaseHomeFragment.getTabs() -> strip TopTab id=4
-[XMPlaylistUnlock] hook installed: com.tencent.qqmusiclite.activity.MainActivity.configNavigationAndMinibar() -> navigate to 我的
-[XMPlaylistUnlock] blocked QuickPlay landing (isGotoQuickPlayTab was true), home stays on 推荐
-[XMPlaylistUnlock] removed 免费听 tab (TopTab id=4), home falls back to 推荐
-[XMPlaylistUnlock] startup navigated to 我的 (id=0x7f0b0831)
-[XMPlaylistUnlock] bypassed playlist limit: folderId=xxx realCount=xxx (reported 0)
+[MiMusicX] hook installed via findAndHookMethod: com.tencent.qqmusic.core.folder.FolderInfo.getCount()
+[MiMusicX] hook installed: com.tencent.qqmusiclite.fragment.home.QuickPlayManager.isGotoQuickPlayTab() -> always false
+[MiMusicX] hook installed: com.tencent.qqmusiclite.activity.main.viewmodel.MainActivityViewModel.getTabs() -> strip TopTab id=4
+[MiMusicX] hook installed: com.tencent.qqmusiclite.fragment.home.BaseHomeFragment.getTabs() -> strip TopTab id=4
+[MiMusicX] hook installed: com.tencent.qqmusiclite.activity.MainActivity.configNavigationAndMinibar() -> navigate to 我的
+[MiMusicX] blocked QuickPlay landing (isGotoQuickPlayTab was true), home stays on 推荐
+[MiMusicX] removed 免费听 tab (TopTab id=4), home falls back to 推荐
+[MiMusicX] startup navigated to 我的 (id=0x7f0b0831)
+[MiMusicX] bypassed playlist limit: folderId=xxx realCount=xxx (reported 0)
 ```
 
 时间线：Hook 安装 → `blocked` → `removed` → `startup navigated` 在冷启动首屏阶段依次出现；

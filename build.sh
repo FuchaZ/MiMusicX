@@ -1,5 +1,5 @@
 #!/bin/bash
-# 构建 XMPlaylistUnlock Xposed 模块 APK
+# 构建 MiMusicX Xposed 模块 APK
 # 用法: bash build.sh
 # 工具链: D:\reasonix backup\apk开发\sdk (build-tools 35.0.0, android-35)
 # 注意: aapt2 不兼容中文路径，构建在 ASCII 临时目录进行，产物拷回本目录
@@ -52,7 +52,7 @@ if [ ! -f "$W/debug.jks" ]; then
     -dname "CN=Android Debug,O=Android,C=US"
 fi
 (cd "$W" && java -jar "$BT/lib/apksigner.jar" sign --ks debug.jks --ks-pass pass:android \
-  --key-pass pass:android --out XMPlaylistUnlock-1.1.0.apk aligned.apk)
+  --key-pass pass:android --out MiMusicX-1.1.0.apk aligned.apk)
 
-cp "$W/XMPlaylistUnlock-1.1.0.apk" "$PROJ/"
-echo "DONE: $PROJ/XMPlaylistUnlock-1.1.0.apk"
+cp "$W/MiMusicX-1.1.0.apk" "$PROJ/"
+echo "DONE: $PROJ/MiMusicX-1.1.0.apk"

@@ -45,7 +45,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
  */
 public class MainHook implements IXposedHookLoadPackage {
 
-    private static final String TAG = "XMPlaylistUnlock";
+    private static final String TAG = "MiMusicX";
     private static final String TARGET_PKG = "com.miui.player";
 
     /** 功能一：歌单数量检查点。 */
