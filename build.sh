@@ -28,7 +28,7 @@ echo "[3/6] aapt2 link"
 cp "$PROJ/AndroidManifest.xml" "$W/"
 "$BT/aapt2.exe" link -o "$W/unsigned.apk" --manifest "$W/AndroidManifest.xml" \
   -I /c/Users/FuChaZ/AppData/Local/Temp/android-35.jar \
-  --min-sdk-version 26 --target-sdk-version 32 --version-code 2 --version-name 1.0.1 \
+  --min-sdk-version 26 --target-sdk-version 32 --version-code 3 --version-name 1.1.0 \
   --auto-add-overlay
 
 echo "[4/6] pack dex + assets"
@@ -52,7 +52,7 @@ if [ ! -f "$W/debug.jks" ]; then
     -dname "CN=Android Debug,O=Android,C=US"
 fi
 (cd "$W" && java -jar "$BT/lib/apksigner.jar" sign --ks debug.jks --ks-pass pass:android \
-  --key-pass pass:android --out XMPlaylistUnlock-1.0.1.apk aligned.apk)
+  --key-pass pass:android --out XMPlaylistUnlock-1.1.0.apk aligned.apk)
 
-cp "$W/XMPlaylistUnlock-1.0.1.apk" "$PROJ/"
-echo "DONE: $PROJ/XMPlaylistUnlock-1.0.1.apk"
+cp "$W/XMPlaylistUnlock-1.1.0.apk" "$PROJ/"
+echo "DONE: $PROJ/XMPlaylistUnlock-1.1.0.apk"

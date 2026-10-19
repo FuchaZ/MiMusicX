@@ -7,6 +7,8 @@ __pycache__/
 analysis/qm_dex/
 analysis/xm_dex/
 analysis/*_strings.txt
+analysis/classes_index.txt
 
 # 旧版本 APK 只保留当前可用构建
 XMPlaylistUnlock-1.0.0.apk
+XMPlaylistUnlock-1.0.1.apk
