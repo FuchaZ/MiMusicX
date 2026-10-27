@@ -1,14 +1,14 @@
 #!/bin/bash
 # 构建 MiMusicX Xposed 模块 APK
 # 用法: bash build.sh
-# 工具链: D:\reasonix backup\apk开发\sdk (build-tools 35.0.0, android-35)
+# 工具链: D:\reasonix backup\02-移动与安卓\apk开发\sdk (build-tools 35.0.0, android-35)
 # 注意: aapt2 不兼容中文路径，构建在 ASCII 临时目录进行，产物拷回本目录
 set -e
 
 PROJ="$(cd "$(dirname "$0")" && pwd)"
 export JAVA_HOME="/c/Program Files/Eclipse Adoptium/jdk-17.0.19.10-hotspot"
 export PATH="$JAVA_HOME/bin:$PATH"
-SDK="D:/reasonix backup/apk开发/sdk"
+SDK="D:/reasonix backup/02-移动与安卓/apk开发/sdk"
 BT="$SDK/build-tools/35.0.0"
 W="/c/Users/FuChaZ/AppData/Local/Temp/xmpu_build"
 
@@ -28,7 +28,7 @@ echo "[3/6] aapt2 link"
 cp "$PROJ/AndroidManifest.xml" "$W/"
 "$BT/aapt2.exe" link -o "$W/unsigned.apk" --manifest "$W/AndroidManifest.xml" \
   -I /c/Users/FuChaZ/AppData/Local/Temp/android-35.jar \
-  --min-sdk-version 26 --target-sdk-version 32 --version-code 3 --version-name 1.1.0 \
+  --min-sdk-version 26 --target-sdk-version 32 --version-code 5 --version-name 1.3.0 \
   --auto-add-overlay
 
 echo "[4/6] pack dex + assets"
@@ -52,7 +52,7 @@ if [ ! -f "$W/debug.jks" ]; then
     -dname "CN=Android Debug,O=Android,C=US"
 fi
 (cd "$W" && java -jar "$BT/lib/apksigner.jar" sign --ks debug.jks --ks-pass pass:android \
-  --key-pass pass:android --out MiMusicX-1.1.0.apk aligned.apk)
+  --key-pass pass:android --out MiMusicX-1.3.0.apk aligned.apk)
 
-cp "$W/MiMusicX-1.1.0.apk" "$PROJ/"
-echo "DONE: $PROJ/MiMusicX-1.1.0.apk"
+cp "$W/MiMusicX-1.3.0.apk" "$PROJ/"
+echo "DONE: $PROJ/MiMusicX-1.3.0.apk"

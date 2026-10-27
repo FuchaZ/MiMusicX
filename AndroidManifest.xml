@@ -8,7 +8,7 @@
 
         <meta-data android:name="xposedmodule" android:value="true" />
         <meta-data android:name="xposeddescription"
-            android:value="小米音乐(QQ音乐简洁版)增强：解除歌单1000首添加限制、不自动进入免费听页、启动直达「我的」" />
+            android:value="小米音乐(QQ音乐简洁版)增强：解除歌单1000首添加限制、不自动进入免费听页、启动直达「我的」、屏蔽蓝牙设备连接的臻品音质弹窗、修好最近播放缺自建歌单" />
         <meta-data android:name="xposedminversion" android:value="93" />
     </application>
 </manifest>

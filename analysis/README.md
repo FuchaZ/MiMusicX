@@ -187,7 +187,7 @@ TopTab id -> Fragment 映射（`HomePageAdapter.getItem`）：
 日志只证明 Hook 装上，不证明行为对。用 adb 做行为验证：
 
 ```powershell
-$adb = "D:\reasonix backup\apk开发\sdk\platform-tools\adb.exe"
+$adb = "D:\reasonix backup\02-移动与安卓\apk开发\sdk\platform-tools\adb.exe"
 # 1) 冷启动
 & $adb logcat -c; & $adb shell "am force-stop com.miui.player"
 & $adb shell "am start -n com.miui.player/com.miui.player.ui.MusicBrowserActivity"

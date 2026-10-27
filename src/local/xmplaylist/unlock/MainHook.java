@@ -42,6 +42,38 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
  *
  *   绕过方式: Hook isGotoQuickPlayTab() 让它恒返回 false。它是纯 ABT 读取器、无副作用，
  *   置 false 后上述调用方一致地走推荐页分支。
+ *
+ * 功能四：屏蔽蓝牙设备连接后的「臻品音质」推广弹窗
+ *
+ *   现象: 连上任意蓝牙耳机/音箱，播放页就会弹出「您的 XXX 设备已连接 /
+ *   设备支持播放超级会员臻品音质 / 开启您的尊享权益」。设备名是运行时读出来的，
+ *   所以换设备就换名字，并不是写死的。
+ *
+ *   真实链路 (4.47.0.1):
+ *     BluetoothAudioMonitor$audioDeviceCallback$1.onAudioDevicesAdded(devices)
+ *       -> deviceName = AudioDeviceInfo.getProductName()
+ *                       ?: BluetoothDeviceManager.getBluetoothDeviceName()
+ *       -> ExcellentHeadPhoneManager.handleBluetoothConnected(deviceName)
+ *            -> currentDeviceName = deviceName; debounceThrottle 防抖后再触发
+ *       -> ExcellentHeadPhoneManager.checkAndShow()          // suspend
+ *            -> 十余道前置守卫：getDeviceName / isFlipOuter / offline / isLogin /
+ *               isDialogShowing / isYoungMode / HorizontalScreenPlayerHelper.goto /
+ *               isCurrentAdPage / isCurrentExcellentGuideAlert /
+ *               isCurrentExcellentTryEndAlert / isShowingOtherAlert
+ *            -> getPopUpWindow(deviceName) -> DialogRepo.getEarphoneConnectPopup(deviceName)
+ *                 // 服务端下发 title / subTitle / buttonText / deviceImageUrl / soundQuality
+ *            -> DeviceFrequency.canShowHeadPhoneDialog(deviceName, frequency)
+ *            -> show(GetEarphoneConnectPopupRsp)
+ *                 -> ExcellentHeadPhoneDialog.Companion.show(popUpInfo, onConfirm)
+ *                      -> ActivityUtils.getTopActivity() -> FragmentManager -> show()
+ *
+ *   反查确认无第二条路径: checkAndShow 只有 access$checkAndShow 一个引用方，
+ *   Companion.show 只被 ExcellentHeadPhoneManager.show 引用，
+ *   DialogRepo.getEarphoneConnectPopup 只被 getPopUpWindow 引用。
+ *
+ *   绕过方式: Hook checkAndShow() 直接返回（suspend 函数返回 kotlin.Unit），
+ *   弹窗连同那次服务端请求一起消失；再 Hook Companion.show() 空实现做兜底，
+ *   万一将来 checkAndShow 改名失效，弹窗依然弹不出来。
  */
 public class MainHook implements IXposedHookLoadPackage {
 
@@ -72,9 +104,26 @@ public class MainHook implements IXposedHookLoadPackage {
     /** 底栏「我的」页导航目标 ID（4.47.0.1 实测 0x7f0b0831）。 */
     private static final int NAV_ID_MY_FRAGMENT = 0x7f0b0831;
 
+    /** 功能四主力：蓝牙耳机「臻品音质」推广弹窗的决策入口。 */
+    private static final String EXCELLENT_HEADPHONE_MANAGER =
+            "com.tencent.qqmusiclite.business.bluetooth.headphone.ExcellentHeadPhoneManager";
+    /** 功能四兜底：弹窗真正显示的地方（Companion 是 Kotlin object）。 */
+    private static final String EXCELLENT_HEADPHONE_DIALOG =
+            "com.tencent.qqmusiclite.business.bluetooth.headphone.ExcellentHeadPhoneDialog";
+
+    /** 功能五：本地音乐数据源，「最近播放歌单」的读取入口在这里。 */
+    private static final String LOCAL_MY_MUSIC_DATA_SOURCE =
+            "com.tencent.qqmusic.data.mymusic.LocalMyMusicDataSource";
+    /** 诊断用：播放时记录「最近播放歌单」的入口（排查写入没生效时打开）。 */
+    private static final String MUSIC_PLAYER_HELPER_RECENT =
+            "com.tencent.qqmusiccommon.util.music.MusicPlayerHelper$12";
+    /** db_tag：最近播放歌单在 folder_info_folders 表里的标签（宿主写入/读取都用它）。 */
+    private static final int DB_TAG_RECENT_FAVOR = 0;
+
     private static final AtomicBoolean sRemovedQuickPlayLogged = new AtomicBoolean(false);
     private static final AtomicBoolean sBlockedLandingLogged = new AtomicBoolean(false);
     private static final AtomicBoolean sNavigatedToMyLogged = new AtomicBoolean(false);
+    private static final AtomicBoolean sBlockedHeadphonePopupLogged = new AtomicBoolean(false);
 
     @Override
     public void handleLoadPackage(final LoadPackageParam lpparam) {
@@ -85,6 +134,264 @@ public class MainHook implements IXposedHookLoadPackage {
         hookQuickPlayLanding(lpparam.classLoader);
         hookQuickPlayTab(lpparam.classLoader);
         hookStartupToMyPage(lpparam.classLoader);
+        hookBluetoothQualityPopup(lpparam.classLoader);
+        hookRecentPlayFolderWrite(lpparam.classLoader);
+    }
+
+    // ------------------------------------------------------------------
+    // 功能四：屏蔽蓝牙设备连接后的「臻品音质」推广弹窗
+    // ------------------------------------------------------------------
+
+    /**
+     * 双保险：
+     *   1) checkAndShow() 直接早退 —— 连服务端请求都不发，最干净
+     *   2) Companion.show() 空实现 —— 万一 checkAndShow 改名/改签名，兜底吞掉弹窗
+     *
+     * 只屏蔽这一个弹窗，蓝牙连接本身、音频切换、其它蓝牙提示都不受影响：
+     * handleBluetoothConnected/disconnected 只负责记录设备名并触发 checkAndShow。
+     */
+    private static void hookBluetoothQualityPopup(final ClassLoader classLoader) {
+        final Object unit = kotlinUnit(classLoader);
+
+        // ---- 1) 主力：决策入口早退。suspend 函数返回 kotlin.Unit，调用方视为「检查完、无事发生」 ----
+        final XC_MethodHook checkHook = new XC_MethodHook() {
+            @Override
+            protected void beforeHookedMethod(MethodHookParam param) {
+                param.setResult(unit);
+                logBlockedHeadphonePopup("at checkAndShow()");
+            }
+        };
+        boolean checkHooked = false;
+        try {
+            XposedHelpers.findAndHookMethod(EXCELLENT_HEADPHONE_MANAGER, classLoader,
+                    "checkAndShow", "kotlin.coroutines.Continuation", checkHook);
+            checkHooked = true;
+            XposedBridge.log("[" + TAG + "] hook installed: " + EXCELLENT_HEADPHONE_MANAGER
+                    + ".checkAndShow(Continuation) -> always return Unit"
+                    + " (no popup, no request)");
+        } catch (Throwable t) {
+            XposedBridge.log("[" + TAG + "] hook checkAndShow failed: " + t);
+        }
+        if (!checkHooked) {
+            // 兜底：精确签名没匹配上（版本更新改了签名/加了默认参数）时，按方法名挂
+            hookMethodsByName(classLoader, EXCELLENT_HEADPHONE_MANAGER, "checkAndShow", checkHook);
+        }
+
+        // ---- 2) 兜底：真正显示弹窗的地方直接吞掉 ----
+        final XC_MethodHook showHook = new XC_MethodHook() {
+            @Override
+            protected void beforeHookedMethod(MethodHookParam param) {
+                param.setResult(null);
+                logBlockedHeadphonePopup("at Companion.show()");
+            }
+        };
+        final String companion = EXCELLENT_HEADPHONE_DIALOG + "$Companion";
+        boolean showHooked = false;
+        try {
+            XposedHelpers.findAndHookMethod(companion, classLoader, "show",
+                    EXCELLENT_HEADPHONE_DIALOG + "$EarphoneConnectPopupInfo",
+                    "kotlin.jvm.functions.Function0", showHook);
+            showHooked = true;
+            XposedBridge.log("[" + TAG + "] hook installed: " + companion
+                    + ".show() -> no-op (fallback)");
+        } catch (Throwable t) {
+            XposedBridge.log("[" + TAG + "] hook Companion.show failed: " + t);
+        }
+        if (!showHooked) {
+            hookMethodsByName(classLoader, companion, "show", showHook);
+        }
+    }
+
+    /** 按方法名挂上所有重载：精确签名失配时的兜底。 */
+    private static void hookMethodsByName(final ClassLoader classLoader, final String className,
+            final String methodName, final XC_MethodHook hook) {
+        try {
+            Class<?> clazz = Class.forName(className, false, classLoader);
+            int count = 0;
+            for (Method m : clazz.getDeclaredMethods()) {
+                if (m.getName().equals(methodName)) {
+                    XposedBridge.hookMethod(m, hook);
+                    count++;
+                }
+            }
+            XposedBridge.log("[" + TAG + "] hook installed via hookMethod fallback: "
+                    + className + "." + methodName + " x" + count);
+        } catch (Throwable t) {
+            XposedBridge.log("[" + TAG + "] fallback hook " + className + "." + methodName
+                    + " failed: " + t);
+        }
+    }
+
+    /** kotlin.Unit 常量：suspend 函数「正常结束但什么也没做」的返回值。 */
+    private static Object kotlinUnit(final ClassLoader classLoader) {
+        try {
+            // 用宿主的 ClassLoader 取，模块自己的 ClassLoader 看不到 kotlin 标准库
+            return Class.forName("kotlin.Unit", false, classLoader)
+                    .getField("INSTANCE").get(null);
+        } catch (Throwable t) {
+            XposedBridge.log("[" + TAG + "] resolve kotlin.Unit failed: " + t);
+            return null;
+        }
+    }
+
+    private static void logBlockedHeadphonePopup(final String where) {
+        if (sBlockedHeadphonePopupLogged.compareAndSet(false, true)) {
+            XposedBridge.log("[" + TAG + "] blocked bluetooth quality popup " + where);
+        }
+    }
+
+    // ------------------------------------------------------------------
+    // 功能五：修好「最近播放」不更新播放过的歌单
+    // ------------------------------------------------------------------
+
+    /**
+     * 小米版「我的 → 最近播放」不记录实际播放过的歌单（官方 QQ 音乐正常）。
+     *
+     * 根因（4.47.0.1 实测，logcat + 数据库双重确认）:
+     *   播放歌曲时 MusicPlayerHelper$12.addRecentPlaySong(SongInfomation) 被正常调用，
+     *   但它内部要同时满足两个条件才会走到「写最近播放歌单」：
+     *     1) MusicPlayList.getPlayListType() ∈ {11, 16, 18}
+     *     2) RecentManager.getTempPlayList().getId() == MusicPlayList.getPlayListTypeId()
+     *   任一不满足就直接 return，于是 insertRecentPlayFolderInternal 从不被调用、
+     *   数据库里 folder_info_folders 的 db_tag=0 一直是旧记录。
+     *   实测日志：addRecentPlaySong 连续触发，insertRecentPlayFolderInternal 一次都没有。
+     *
+     * 做法: 在 addRecentPlaySong 返回后兜底补写。
+     *   若这一轮宿主确实没写库（db_tag=0 里查不到当前歌单），
+     *   就把 RecentManager.getTempPlayList() 组装成 FolderInfo，
+     *   交给宿主自己的 LocalMyMusicDataSource.insertRecentPlayFolder() 写入 ——
+     *   走的是官方那条写库路径，tag 等细节全由宿主决定，模块不自己拼 SQL。
+     *
+     * 为什么不改读取侧: 曾尝试把 db_tag=4 的记录合并进列表，实测那批是历史/同步遗留
+     *   数据（例如「纯音乐 0首」），合并进来只会显示错误条目，该方案已废弃。
+     */
+    private static void hookRecentPlayFolderWrite(final ClassLoader classLoader) {
+        try {
+            XposedHelpers.findAndHookMethod(MUSIC_PLAYER_HELPER_RECENT, classLoader,
+                    "addRecentPlaySong", "com.tencent.qqmusicsdk.protocol.SongInfomation",
+                    new XC_MethodHook() {
+                        @Override
+                        protected void afterHookedMethod(MethodHookParam param) {
+                            try {
+                                recordCurrentPlaylist(classLoader);
+                            } catch (Throwable t) {
+                                XposedBridge.log("[" + TAG + "] recordCurrentPlaylist failed: " + t);
+                            }
+                        }
+                    });
+            XposedBridge.log("[" + TAG + "] hook installed: " + MUSIC_PLAYER_HELPER_RECENT
+                    + ".addRecentPlaySong() -> ensure current playlist enters 最近播放");
+        } catch (Throwable t) {
+            XposedBridge.log("[" + TAG + "] hook addRecentPlaySong failed: " + t);
+        }
+    }
+
+    /**
+     * 把「当前播放的歌单」补写进最近播放。
+     *
+     * 只在宿主自己没写成功时补，避免和官方逻辑打架：
+     *   - tempPlayList 为空 ⇒ 这次播放不来自歌单（单曲 / 电台），不处理
+     *   - db_tag=0 里已有该歌单 ⇒ 宿主写过了，不动
+     */
+    private static void recordCurrentPlaylist(final ClassLoader classLoader) {
+        Object playList = currentTempPlayList(classLoader);
+        if (playList == null) {
+            return;
+        }
+        Long id = longGetter(playList, "getId");
+        if (id == null || id.longValue() <= 0L) {
+            return;
+        }
+        String name = stringGetter(playList, "getTitle");
+        if (name == null || name.length() == 0) {
+            return;
+        }
+        // 宿主已经写过就不再插手（同一次播放可能触发多次）
+        if (isAlreadyRecorded(classLoader, id.longValue())) {
+            return;
+        }
+
+        try {
+            Class<?> folderInfoCls = Class.forName(
+                    "com.tencent.qqmusic.core.folder.FolderInfo", false, classLoader);
+            Object folderInfo = folderInfoCls.newInstance();
+            XposedHelpers.callMethod(folderInfo, "setId", id);
+            XposedHelpers.callMethod(folderInfo, "setDisstId", id);
+            XposedHelpers.callMethod(folderInfo, "setName", name);
+            String cover = stringGetter(playList, "getCoverUrl");
+            if (cover != null) {
+                XposedHelpers.callMethod(folderInfo, "setPicUrl", cover);
+            }
+            Object songNum = XposedHelpers.callMethod(playList, "getSongNum");
+            if (songNum instanceof Integer) {
+                XposedHelpers.callMethod(folderInfo, "setCount", songNum);
+            }
+
+            Object dataSource = Class.forName(LOCAL_MY_MUSIC_DATA_SOURCE, false, classLoader)
+                    .newInstance();
+            XposedHelpers.callMethod(dataSource, "insertRecentPlayFolder", folderInfo);
+            XposedBridge.log("[" + TAG + "] recorded current playlist into 最近播放: "
+                    + name + " (id=" + id + ")");
+        } catch (Throwable t) {
+            XposedBridge.log("[" + TAG + "] insert recent play folder failed: " + t);
+        }
+    }
+
+    /** RecentManager.INSTANCE.getTempPlayList()，取不到返回 null。 */
+    private static Object currentTempPlayList(final ClassLoader classLoader) {
+        try {
+            Class<?> rm = Class.forName(
+                    "com.tencent.qqmusiclite.manager.RecentManager", false, classLoader);
+            Object instance = rm.getField("INSTANCE").get(null);
+            return XposedHelpers.callMethod(instance, "getTempPlayList");
+        } catch (Throwable t) {
+            return null;
+        }
+    }
+
+    /** db_tag=0 里是否已有这个歌单（宿主已经写过了）。 */
+    private static boolean isAlreadyRecorded(final ClassLoader classLoader, final long disstId) {
+        try {
+            Class<?> globalContext = Class.forName(
+                    "com.tencent.qqmusiclite.api.GlobalContext", false, classLoader);
+            Object context = XposedHelpers.callMethod(
+                    globalContext.getField("INSTANCE").get(null), "getContext");
+            Class<?> qmDatabase = Class.forName(
+                    "com.tencent.qqmusic.data.db.QMDatabase", false, classLoader);
+            Object companion = qmDatabase.getField("Companion").get(null);
+            Object db = XposedHelpers.callMethod(companion, "getDatabase", context);
+            Object dao = XposedHelpers.callMethod(db, "folderInfoDAO");
+            Object entity = XposedHelpers.callMethod(dao, "getFolderByDisstIdAndTag",
+                    Long.valueOf(disstId), Integer.valueOf(DB_TAG_RECENT_FAVOR));
+            return entity != null;
+        } catch (Throwable t) {
+            return false;  // 查不到就按「没写过」处理，交给宿主去重
+        }
+    }
+
+    private static Long longGetter(final Object target, final String method) {
+        try {
+            Object v = XposedHelpers.callMethod(target, method);
+            if (v instanceof Long) {
+                return (Long) v;
+            }
+            if (v instanceof Integer) {
+                return Long.valueOf(((Integer) v).longValue());
+            }
+        } catch (Throwable ignored) {
+        }
+        return null;
+    }
+
+    private static String stringGetter(final Object target, final String method) {
+        try {
+            Object v = XposedHelpers.callMethod(target, method);
+            if (v != null) {
+                return v.toString();
+            }
+        } catch (Throwable ignored) {
+        }
+        return null;
     }
 
     // ------------------------------------------------------------------
