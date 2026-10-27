@@ -9,6 +9,6 @@ analysis/xm_dex/
 analysis/*_strings.txt
 analysis/classes_index.txt
 
-# 旧版本 APK 只保留当前可用构建
-MiMusicX-1.0.0.apk
-MiMusicX-1.0.1.apk
+# 旧版本 APK 只保留当前可用构建（发新版时把白名单换成新版号）
+MiMusicX-*.apk
+!MiMusicX-1.3.0.apk
